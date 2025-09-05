@@ -5,20 +5,28 @@ import { useRouter } from "expo-router";
 import { Image, SafeAreaView, ScrollView, View } from "react-native";
 
 export default function Index() {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <SafeAreaView className="flex-1 bg-primary">
-      <Image source={images.bg} className="absolute w-full -z-0" resizeMode="cover"/>
+      <Image
+        source={images.bg}
+        className="absolute w-full -z-0"
+        resizeMode="cover"
+      />
       <ScrollView
         className="flex-1 px-5"
-        showsVerticalScrollIndicator = {false}
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{ flexGrow: 1, paddingBottom: 10 }}
       >
-        <Image source={icons.logo} className="w-12 h-10 mb-5 mx-auto" resizeMode="contain"/>
+        <Image
+          source={icons.logo}
+          className="w-12 h-10 mb-5 mx-auto"
+          resizeMode="contain"
+        />
         <View className="flex-1 mt-5">
           <SearchBar
-          onPress = {() => router.push("/search")}
-          placeholder="Search for a movie"
+            onPress={() => router.push("/search")}
+            placeholder="Search for a movie"
           />
         </View>
       </ScrollView>
