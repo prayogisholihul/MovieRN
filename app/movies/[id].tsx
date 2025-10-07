@@ -1,11 +1,11 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { SafeAreaView, Text, View } from 'react-native'
 
 const MovieDetails = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>MovieDetails</Text>
-    </View>
+    </SafeAreaView>
   )
 }
 
